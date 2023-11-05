@@ -66,7 +66,7 @@ with open("./durfess2.txt","w") as file:
                 )
                 
                 res = completion.choices[0].message
-                
+                print(res)
                 for pos in positives:
                     if pos in res:
                         print("Positive :)")
@@ -77,8 +77,8 @@ with open("./durfess2.txt","w") as file:
                             if neg in res:
                                 print("Negative :(")
                                 dict[club] -= 1
-print(dict)
-file.write(dict)
+                
+        file.write(str(dict) = "\n")
 
 # {"role": "system", "content": "Always answer in rhymes."},    
 # llama.qrt.services:8000/v1
