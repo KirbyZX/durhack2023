@@ -40,8 +40,11 @@ def remove_emojis(data):
                       "]+", re.UNICODE)
     return re.sub(emoj, '', data)
 
+email = "procreate_antiquely086@simplelogin.com"
+password = "qawsedrftg"
+
 with open("./durfess2.txt","w") as file:
-    for post in get_posts("durfess", pages=100, timeout=120, credentials=("lucas.kirby@gmail.com","asdf456")):
+    for post in get_posts("durfess", pages=100, timeout=120, credentials=(email,password)):
 
         time.sleep(2)
         print("New post!")
